@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @patient.name %>
@@ -15,5 +13,21 @@
   <%= @patient.dob %>
 </p>
 
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Weight</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patient.weights.each do |weight| %>
+      <tr>
+        <td><%= weight.weigh_month %></td>
+        <td><%= weight.weight %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
