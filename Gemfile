@@ -58,3 +58,6 @@ gem "hirb", "~> 0.7.3"
 
 # Added at 2017-09-20 14:03:59 -0400 by christopherarguello:
 gem "rails-erd", "~> 1.5"
+
+# Added at 2017-09-20 17:43:22 -0400 by christopherarguello:
+gem "faker", "~> 1.8"
