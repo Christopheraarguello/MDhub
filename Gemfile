@@ -61,3 +61,9 @@ gem "rails-erd", "~> 1.5"
 
 # Added at 2017-09-20 17:43:22 -0400 by christopherarguello:
 gem "faker", "~> 1.8"
+
+# Added at 2017-09-20 19:13:54 -0400 by christopherarguello:
+gem "chartkick", "~> 2.2"
+
+# Added at 2017-09-20 19:15:38 -0400 by christopherarguello:
+gem "groupdate", "~> 3.2"

@@ -35,11 +35,12 @@ m = 1
   50.times do |i|
     wdata = {
       weight: rand(120..300),
-      weigh_month: m +=1,
+      weigh_month: m,
       patient_id: i +=1
     }
     Weight.create(wdata)
   end
+  m +=1
 end
 puts "#{Weight.count} Weight records were created"
 
