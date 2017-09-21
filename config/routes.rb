@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bmi_status/index'
+  get 'bmi_status/show'
   resources :weights
   resources :patients do
     resources :charts, only: [] do
