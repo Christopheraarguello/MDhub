@@ -52,6 +52,9 @@ class PatientsController < ApplicationController
     end
   end
 
+
+
+
   # DELETE /patients/1
   # DELETE /patients/1.json
   def destroy
@@ -70,7 +73,7 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:name, :weight)
+      params.require(:patient).permit(:name, :weight, :height)
     end
 end
 
