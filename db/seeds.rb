@@ -21,6 +21,7 @@ puts "#{Doctor.count} Doctor's were created"
   data = {
     name: Faker::Name.unique.name,
     weight: rand(120..300),
+    # dob:
     doctor_id: rand(1..10)
   }
   Patient.create(data)
@@ -36,7 +37,8 @@ m = 1
     wdata = {
       weight: rand(120..300),
       weigh_month: m,
-      patient_id: i +=1
+      patient_id: i +=1,
+      dob: 09/20/2017
     }
     Weight.create(wdata)
   end
@@ -46,7 +48,7 @@ puts "#{Weight.count} Weight records were created"
 
 
 
-
+Patient.create(name:)
 
 
 

@@ -31,3 +31,6 @@
     <% end %>
   </tbody>
 </table>
+
+<%#= line_chart @patient.weights.group(:weight).count %>
+<%= weight_by_month(@patient.id) %>

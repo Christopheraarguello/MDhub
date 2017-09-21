@@ -67,3 +67,6 @@ gem "chartkick", "~> 2.2"
 
 # Added at 2017-09-20 19:15:38 -0400 by christopherarguello:
 gem "groupdate", "~> 3.2"
+
+# Added at 2017-09-20 20:59:51 -0400 by christopherarguello:
+gem "hightop", "~> 0.2.0"
