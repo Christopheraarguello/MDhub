@@ -22,7 +22,7 @@ puts "#{Doctor.count} Doctor's were created"
     name: Faker::Name.unique.name,
     weight: rand(120..300),
     doctor_id: rand(1..10),
-    height: 72
+    height: 6
 
   }
   Patient.create(data)

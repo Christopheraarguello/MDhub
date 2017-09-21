@@ -1,26 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="table-title">
+  <h3>Patients</h3>
+</div>
 
-<h1>Patients</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Weight</th>
-      <th>KG</th>
-      <th colspan="3"></th>
+      <th class="text-left">Patient Name</th>
+      <th class="text-left">Feet</th>
+      <th class="text-left">Inches</th>
+      <th class="text-left">Lb's</th>
+      <th class="text-left">BMI</th>
+      <th class="text-left">Status</th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table-hover">
     <% @patients.each do |patient| %>
-      <tr>
-        <td><%= link_to patient.name, patient %></td>
-        <td><%= link_to patient.weight, patient %></td>
-
-      </tr>
+        <tr>
+          <td class="text-left"><%= link_to patient.name, patient %></td>
+          <td class="text-left"><%= link_to patient.height, patient %></td>
+          <td class="text-left"><%= link_to patient.height_inch, patient %></td>
+          <td class="text-left"><%= link_to patient.weight, patient %></td>
+          <td class="text-left"><%= link_to patient.bmi, patient %></td>
+          <td class="text-left"><%= link_to "Obese/Not Obese", patient %></td>
+        </tr>
     <% end %>
   </tbody>
-</table>
 
 <br>
