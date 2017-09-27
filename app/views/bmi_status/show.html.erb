@@ -1,2 +1,28 @@
-<h1>BmiStatus#show</h1>
-<p>Find me in app/views/bmi_status/show.html.erb</p>
+<h1><%= "Patients with BMI of #{params[:id]}" %></h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>BMI</th>
+      <th>BMI STATUS</th>
+
+    </tr>
+  </thead>
+
+<tbody>
+  <% @patients.each do |patient|%>
+  <% if patient.bmi_status == "#{params[:id].capitalize}" %>
+    <tr>
+      <td><%=link_to patient.name, patient %></td>
+      <td><%=link_to patient.weight, patient %></td>
+      <td><%=link_to patient.bmi, patient %></td>
+      <td><%=link_to patient.bmi_status, patient %></td>
+    </tr>
+  <% end %>
+  <%end %>
+
+</tbody>
+</table>

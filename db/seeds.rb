@@ -12,9 +12,9 @@ dr_data = {
   name: Faker::Name.unique.name,
   # type: DRTYPE
 }
-Doctor.create(dr_data)
+p Doctor.create(dr_data)
 end
-puts "#{Doctor.count} Doctor's were created"
+"#{Doctor.count} Doctor's were created"
 
 
 50.times do
@@ -25,9 +25,9 @@ puts "#{Doctor.count} Doctor's were created"
     height: 6
 
   }
-  Patient.create(data)
+ p Patient.create(data)
 end
-puts "#{Patient.count} Patient's were created"
+"#{Patient.count} Patient's were created"
 
 
 # arr = [(1..50)]
@@ -40,11 +40,11 @@ m = 1
       weigh_month: m,
       patient_id: i +=1,
     }
-    Weight.create(wdata)
+  p Weight.create(wdata)
   end
   m +=1
 end
-puts "#{Weight.count} Weight records were created"
+"#{Weight.count} Weight records were created"
 
 
 

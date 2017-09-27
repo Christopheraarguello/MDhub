@@ -1,2 +1,25 @@
-<h1>BmiStatus#index</h1>
-<p>Find me in app/views/bmi_status/index.html.erb</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>BMI</th>
+      <th>BMI Status</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient|%>
+      <%if patient.bmi_status == "Normal" %>
+      <tr>
+        <td><%=link_to patient.name, patient %></td>
+        <td><%=link_to patient.weight, patient %></td>
+        <td><%=link_to patient.bmi, patient %></td>
+        <td><%=link_to patient.bmi_status, patient %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -7,6 +7,9 @@
       <tr>
         <th>Name</th>
         <th>Weight</th>
+        <th>BMI</th>
+        <th>BMI STATUS</th>
+
       </tr>
     </thead>
 
@@ -15,6 +18,8 @@
         <tr>
           <td><%=link_to patient.name, patient %></td>
           <td><%=link_to patient.weight, patient %></td>
+          <td><%=link_to patient.bmi, patient %></td>
+          <td><%=link_to patient.bmi_status, patient %></td>
         </tr>
       <% end %>
     </tbody>
