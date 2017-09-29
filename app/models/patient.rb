@@ -1,6 +1,13 @@
 class Patient < ApplicationRecord
   belongs_to :doctor
   has_many :weights
+  has_and_belongs_to_many :friendships,
+   class_name: "Patient",
+   join_table:  :friendships,
+   foreign_key: :patient_id,
+   association_foreign_key: :friend_patient_id
+
+
 
   def weight_kg
     weight * 0.45

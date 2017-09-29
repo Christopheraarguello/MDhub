@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  root 'doctors#index'
   get 'bmi_status/index'
-  get 'bmi_status/show/:id' => 'bmi_status#show'
+  get 'bmi_status/:id' => 'bmi_status#show', as: 'bmi_show'
   resources :weights
 
   resources :patients do
