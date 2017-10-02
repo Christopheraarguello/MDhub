@@ -12,7 +12,7 @@
   <strong>Dob:</strong>
   <%= @patient.dob %>
 </p>
-
+<!--Patient Weight table goes below!!! -->
 <table>
   <thead>
     <tr>
@@ -30,6 +30,27 @@
     <% end %>
   </tbody>
 </table>
+<!--Patient Weight table goes above!!! -->
+<!--Patient Friendship table goes below!!! -->
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weight</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patient.friendships do |friend| %>
+      <tr>
+        <td><%= friend.name %></td>
+        <td><%= friend.weight %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!--Patient Friendship table goes above!!! -->
 
 <%#= line_chart @patient.weights.group(:weight).count %>
 <%= weight_by_month(@patient.id) %>
