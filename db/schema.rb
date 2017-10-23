@@ -10,20 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929225414) do
+ActiveRecord::Schema.define(version: 20171023155854) do
 
   create_table "doctors", force: :cascade do |t|
     t.string "name"
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "friendships", id: false, force: :cascade do |t|
-    t.integer "patient_id"
-    t.integer "friend_patient_id"
-    t.index ["friend_patient_id", "patient_id"], name: "index_friendships_on_friend_patient_id_and_patient_id", unique: true
-    t.index ["patient_id", "friend_patient_id"], name: "index_friendships_on_patient_id_and_friend_patient_id", unique: true
   end
 
   create_table "patients", force: :cascade do |t|
